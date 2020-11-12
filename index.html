@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/myselect.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/myselect.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navigation">
+      <a href="" class="navigation__link">Lorem 1</a>
+      <a href="" class="navigation__link">Lorem 2</a>
+      <a href="" class="navigation__link">Lorem 3</a>
+      <a href="" class="navigation__link">Lorem 4</a>
+      <a href="" class="navigation__link">Lorem 5</a>
+      <a href="" class="navigation__link">Lorem 6</a>
+      <a href="" class="navigation__link selected">Lorem 7</a>
+    </nav>
+
+    <nav class="bread-crumbs">
+      <a href="/" class="bread-crumbs__link">Главная</a>
+      <span class="bread-crumbs__separator">/</span>
+      <span class="bread-crumbs__text">Lorem, ipsum.</span>
+    </nav>
+
+    <main class="main">
+      <h2 class="title">Lorem, ipsum.</h2>
+
+      <ul class="categories">
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 1</span></li>
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 2</span></li>
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 3</span></li>
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 4</span></li>
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 5</span></li>
+        <li class="categories__item"><img src="https://via.placeholder.com/50" alt="" class="categories__image"><span
+            class="categories__text">lorem 6</span></li>
+      </ul>
+
+      <div class="row">
+        <section class="filter">
+          <div class="filter__tools">
+            <h3 class="filter__title">Выбранные критерии</h3>
+            <a class="filter__clear">Очистить все</a>
+          </div>
+
+          <div class="filter__filters"></div>
+
+          <div class="filter__search">
+            <input type="search" data-role="search" placeholder="Поиск в Ювелирных украшениях">
+            <img src="icons/Search-Icon.svg" alt="">
+          </div>
+
+          <div class="filter__item filter-group" id="price-filter">
+            <div class="filter-group__header">
+              <span class="filter-group__label">Цена</span>
+              <i class="icon filter-group__arrow" style="--img: url('../icons/Arrow-Down-Icon.svg'); --img-expanded: url('../icons/Arrow-Up-Icon.svg');"></i>
+            </div>
+            <div class="filter-group__body">
+              <label class="radio">Любая цена<input type="radio" name="price"><span></span></label>
+              <label class="radio">До 50,000 RUB<input type="radio" name="price"><span></span></label>
+              <label class="radio">50,000 RUB – 100,000 RUB<input type="radio" name="price"><span></span></label>
+              <label class="radio">100,000 RUB – 250,000 RUB<input type="radio" name="price"><span></span></label>
+              <label class="radio">250,000 RUB – 500,000 RUB<input type="radio" name="price"><span></span></label>
+              <label class="radio">500,000 RUB – 1,000,000 RUB<input type="radio" name="price"><span></span></label>
+              <label class="radio">1,000,000 RUB и выше<input type="radio" name="price"><span></span></label>
+              <div class="filter-group__inputs-group">
+                <div class="input-group">
+                  <input class="input-group__input" type="text" required>
+                  <label class="input-group__label">Мин., RRR</label>
+                </div>
+                <span class="filter-group__dash">-</span>
+                <div class="input-group">
+                  <input class="input-group__input" type="text" required>
+                  <label class="input-group__label">Макс., RRR</label>
+                </div>
+                <a class="filter-group__but" data-role="add">
+                  <i class="icon" style="--img: url('../icons/Arrow-Right-Icon.svg');--img-hover: url('../icons/Arrow-Right-Icon-White.svg');"></i>
+                </a>
+              </div>
+              <div class="filter-group__row">
+                <label class="checkbox">Скидка<input type="checkbox" name="discount"><span></span></label>
+                <span>117</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div class="filter__item filter-group">
+            <div class="filter-group__header">
+              <span class="filter-group__label">lorem 1</span>
+              <img src="icons/Arrow-Down-Icon.svg" alt="" class="filter-group__arrow">
+            </div>
+            <div class="filter-group__body"></div>
+          </div> -->
+        </section>
+
+
+        <section class="products">
+          <section class="menu">
+            <span class="menu__results">Результатов: 1257</span>
+            <label class="menu__label">Сортировать по</label>
+            <div class="menu__select">
+              <select name="search_criteria" id="search_criteria" class="select" width=220>
+                <option>Популярность</option>
+                <option>Сначала новинки</option>
+                <option>Возрастание цены</option>
+                <option>Убывание цены</option>
+              </select>
+            </div>
+            <div class="menu__select">
+              <select name="items_on_page" id="items_on_page" class="select" width=220>
+                <option>30 на странице</option>
+                <option>60 на странице</option>
+                <option>120 на странице</option>
+              </select>
+            </div>
+
+            <div class="menu__pagination pagination">
+              <a class="pagination__but">
+                <img src="./icons/Arrow-Left-Normal.svg">
+              </a>
+              <input type="text" class="pagination__current" value="1">
+              <a class="pagination__but">
+                <img src="./icons/Arrow-Right-Normal.svg">
+              </a>
+              <span class="pagination__range">из 42</span>
+            </div>
+          </section>
+
+          <div class="products__list">
+            <div class="products__item product">
+              <div class="product__slider slider">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Left-Normal.svg" alt="" class="arrow">
+                </a>
+                <img src="https://via.placeholder.com/50" alt="" class="slider__img">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Right-Normal.svg" alt="" class="arrow">
+                </a>
+              </div>
+              <span class="product__label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae at
+                ratione ipsum labore fugiat!</span>
+              <span class="product__price">1 325 000 руб.</span>
+              <a href="" class="product__more">Смотреть подробнее</a>
+              <div class="product__tools">
+                <a class="product__tools__item">
+                  <i class="icon like"
+                    style="--img: url('../icons/Favorite-Icon-Normal.svg'); --img-hover: url('../icons/Favorite-Icon-Hover-Active.svg')"></i>
+                </a>
+                <a class="product__tools__item">
+                  <i class="icon basket"
+                    style="--img: url('../icons/Put-In-Bag-Normal.svg'); --img-hover: url('../icons/Put-In-Bag-Hover-Active.svg')"></i>
+                </a>
+              </div>
+            </div>
+            <div class="products__item product">
+              <div class="product__slider slider">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Left-Normal.svg" alt="" class="arrow">
+                </a>
+                <img src="https://via.placeholder.com/50" alt="" class="slider__img">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Right-Normal.svg" alt="" class="arrow">
+                </a>
+              </div>
+              <span class="product__label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae at
+                ratione
+                ipsum labore fugiat!</span>
+              <span class="product__price">1 325 000 руб.</span>
+              <a href="" class="product__more">Смотреть подробнее</a>
+              <div class="product__tools">
+                <a class="product__tools__item">
+                  <i class="icon like"
+                    style="--img: url('../icons/Favorite-Icon-Normal.svg'); --img-hover: url('../icons/Favorite-Icon-Hover-Active.svg')"></i>
+                </a>
+                <a class="product__tools__item">
+                  <i class="icon basket"
+                    style="--img: url('../icons/Put-In-Bag-Normal.svg'); --img-hover: url('../icons/Put-In-Bag-Hover-Active.svg')"></i>
+                </a>
+              </div>
+            </div>
+            <div class="products__item product">
+              <div class="product__slider slider">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Left-Normal.svg" alt="" class="arrow">
+                </a>
+                <img src="https://via.placeholder.com/50" alt="" class="slider__img">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Right-Normal.svg" alt="" class="arrow">
+                </a>
+              </div>
+              <span class="product__label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae at
+                ratione
+                ipsum labore fugiat!</span>
+              <span class="product__price">1 325 000 руб.</span>
+              <a href="" class="product__more">Смотреть подробнее</a>
+              <div class="product__tools">
+                <a class="product__tools__item">
+                  <i class="icon like"
+                    style="--img: url('../icons/Favorite-Icon-Normal.svg'); --img-hover: url('../icons/Favorite-Icon-Hover-Active.svg')"></i>
+                </a>
+                <a class="product__tools__item">
+                  <i class="icon basket"
+                    style="--img: url('../icons/Put-In-Bag-Normal.svg'); --img-hover: url('../icons/Put-In-Bag-Hover-Active.svg')"></i>
+                </a>
+              </div>
+            </div>
+            <div class="products__item product">
+              <div class="product__slider slider">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Left-Normal.svg" alt="" class="arrow">
+                </a>
+                <img src="https://via.placeholder.com/50" alt="" class="slider__img">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Right-Normal.svg" alt="" class="arrow">
+                </a>
+              </div>
+              <span class="product__label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae at
+                ratione
+                ipsum labore fugiat!</span>
+              <span class="product__price">1 325 000 руб.</span>
+              <a href="" class="product__more">Смотреть подробнее</a>
+              <div class="product__tools">
+                <a class="product__tools__item">
+                  <i class="icon like"
+                    style="--img: url('../icons/Favorite-Icon-Normal.svg'); --img-hover: url('../icons/Favorite-Icon-Hover-Active.svg')"></i>
+                </a>
+                <a class="product__tools__item">
+                  <i class="icon basket"
+                    style="--img: url('../icons/Put-In-Bag-Normal.svg'); --img-hover: url('../icons/Put-In-Bag-Hover-Active.svg')"></i>
+                </a>
+              </div>
+            </div>
+            <div class="products__item product">
+              <div class="product__slider slider">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Left-Normal.svg" alt="" class="arrow">
+                </a>
+                <img src="https://via.placeholder.com/50" alt="" class="slider__img">
+                <a class="slider__arrow">
+                  <img src="icons/Arrow-Right-Normal.svg" alt="" class="arrow">
+                </a>
+              </div>
+              <span class="product__label">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore recusandae at
+                ratione
+                ipsum labore fugiat!</span>
+              <span class="product__price">1 325 000 руб.</span>
+              <a href="" class="product__more">Смотреть подробнее</a>
+              <div class="product__tools">
+                <a class="product__tools__item">
+                  <i class="icon like"
+                    style="--img: url('../icons/Favorite-Icon-Normal.svg'); --img-hover: url('../icons/Favorite-Icon-Hover-Active.svg')"></i>
+                </a>
+                <a class="product__tools__item">
+                  <i class="icon basket"
+                    style="--img: url('../icons/Put-In-Bag-Normal.svg'); --img-hover: url('../icons/Put-In-Bag-Hover-Active.svg')"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="products__pagination pagination">
+            <a class="pagination__but">
+              <img src="./icons/Arrow-Left-Normal.svg">
+            </a>
+            <input type="text" class="pagination__current" value="1">
+            <a class="pagination__but">
+              <img src="./icons/Arrow-Right-Normal.svg">
+            </a>
+            <span class="pagination__range">из 42</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
